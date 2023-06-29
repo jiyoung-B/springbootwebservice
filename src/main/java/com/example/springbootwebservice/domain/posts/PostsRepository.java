@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 public interface PostsRepository extends JpaRepository<Posts, Long> {
     @Query("select p from Posts p order by p.id desc")
     List<Posts> findAllDesc();
